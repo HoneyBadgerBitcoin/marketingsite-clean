@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fjalla+One&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gulams Condensed Font Face Definitions */
+@font-face {
+  font-family: "Gulams Condensed";
+  src: url("/fonts/GulamsCondensed-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gulams Condensed";
+  src: url("/fonts/GulamsCondensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gulams Condensed";
+  src: url("/fonts/GulamsCondensed-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gulams Condensed";
+  src: url("/fonts/GulamsCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Balinese Culture Font Face Definition */
+@font-face {
+  font-family: "Balinese Culture";
+  src: url("/fonts/BalineseCulture.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Condensed Neue Soft Font */
+@font-face {
+  font-family: "Condensed Neue Soft";
+  src: url("/fonts/CondensedNeueSoft.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Dacht Font */
+@font-face {
+  font-family: "Dacht";
+  src: url("/fonts/Dacht.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Falgard Font Family */
+@font-face {
+  font-family: "Falgard";
+  src: url("/fonts/Falgard.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Falgard";
+  src: url("/fonts/Falgard-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gendar Font Family */
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gendar";
+  src: url("/fonts/Gendar-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Granika Font */
+@font-face {
+  font-family: "Granika";
+  src: url("/fonts/Granika.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Marvelous Font Family */
+@font-face {
+  font-family: "Marvelous";
+  src: url("/fonts/Marvelous Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Marvelous";
+  src: url("/fonts/Marvelous Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Marvelous";
+  src: url("/fonts/Marvelous Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Marvelous";
+  src: url("/fonts/Marvelous Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Marvelous";
+  src: url("/fonts/Marvelous Semi Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Marvelous";
+  src: url("/fonts/Marvelous Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Neohead Font */
+@font-face {
+  font-family: "Neohead";
+  src: url("/fonts/Neohead.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bondia Condensed Font Family */
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bondia";
+  src: url("/fonts/Bondia-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased font-body;
+  }
+
+  h1 {
+    @apply font-heading font-bold;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-rubik font-bold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all duration-300 font-semibold;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-accent-500 text-white rounded-lg hover:bg-accent-600 transition-all duration-300 font-semibold;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float-slow 20s ease-in-out infinite;
+  }
+
+  .animate-float-slower {
+    animation: float-slower 25s ease-in-out infinite;
+  }
+
+  .animate-float-slowest {
+    animation: float-slowest 30s ease-in-out infinite;
+  }
+
+  .animate-float-cool-slow {
+    animation: float-cool-slow 22s ease-in-out infinite;
+  }
+
+  .animate-float-cool-slower {
+    animation: float-cool-slower 27s ease-in-out infinite;
+  }
+
+  .animate-float-cool-slowest {
+    animation: float-cool-slowest 32s ease-in-out infinite;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateX(-12px) translateY(-8px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(15px) translateY(-12px) rotate(1deg) scale(1.08);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(10px) translateY(15px) rotate(-1deg) scale(0.92);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateX(-8px) translateY(8px) rotate(0.5deg) scale(1.05);
+    opacity: 0.95;
+  }
+}
+
+@keyframes float-slower {
+  0%,
+  100% {
+    transform: translateX(10px) translateY(12px) rotate(-0.5deg) scale(0.95);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translateX(-15px) translateY(-10px) rotate(1.2deg) scale(1.06);
+    opacity: 1;
+  }
+  66% {
+    transform: translateX(18px) translateY(10px) rotate(-1.2deg) scale(0.93);
+    opacity: 0.9;
+  }
+}
+
+@keyframes float-slowest {
+  0%,
+  100% {
+    transform: translateX(-10px) translateY(10px) rotate(0.7deg) scale(1.02);
+    opacity: 0.75;
+  }
+  40% {
+    transform: translateX(12px) translateY(-15px) rotate(-1deg) scale(0.94);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translateX(-6px) translateY(9px) rotate(1.3deg) scale(1.07);
+    opacity: 0.85;
+  }
+}
+
+@keyframes float-cool-slow {
+  0%,
+  100% {
+    transform: translateX(12px) translateY(8px) rotate(0deg) scale(1);
+    opacity: 0.9;
+  }
+  25% {
+    transform: translateX(-15px) translateY(12px) rotate(-1deg) scale(0.92);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10px) translateY(-15px) rotate(1deg) scale(1.08);
+    opacity: 0.85;
+  }
+  75% {
+    transform: translateX(8px) translateY(-8px) rotate(-0.5deg) scale(0.95);
+    opacity: 0.95;
+  }
+}
+
+@keyframes float-cool-slower {
+  0%,
+  100% {
+    transform: translateX(-10px) translateY(-12px) rotate(0.5deg) scale(1.05);
+    opacity: 0.85;
+  }
+  33% {
+    transform: translateX(15px) translateY(10px) rotate(-1.2deg) scale(0.93);
+    opacity: 0.9;
+  }
+  66% {
+    transform: translateX(-18px) translateY(-10px) rotate(1.2deg) scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes float-cool-slowest {
+  0%,
+  100% {
+    transform: translateX(10px) translateY(-10px) rotate(-0.7deg) scale(0.98);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateX(-12px) translateY(15px) rotate(1deg) scale(1.06);
+    opacity: 0.85;
+  }
+  80% {
+    transform: translateX(6px) translateY(-9px) rotate(-1.3deg) scale(0.93);
+    opacity: 0.9;
+  }
+}
+
+/* Liquid Glass Effect Animations */
+@keyframes liquid-shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+@keyframes liquid-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+.mask-badger {
+  -webkit-mask-image: radial-gradient(circle at 50% 60%, black 40%, transparent 70%);
+  mask-image: radial-gradient(circle at 50% 60%, black 40%, transparent 70%);
+}

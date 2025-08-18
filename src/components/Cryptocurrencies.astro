@@ -1,0 +1,67 @@
+---
+import { Bitcoin } from "lucide-react";
+
+const cryptos = [
+  {
+    name: "Bitcoin",
+    symbol: "BTC",
+    canBuy: true,
+    canSell: true,
+    color: "text-orange-500",
+  },
+  {
+    name: "Ethereum",
+    symbol: "ETH",
+    canBuy: true,
+    canSell: true,
+    color: "text-purple-500",
+  },
+  {
+    name: "Litecoin",
+    symbol: "LTC",
+    canBuy: true,
+    canSell: true,
+    color: "text-gray-500",
+  },
+];
+---
+
+<section class="py-20">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Cryptocurrencies We Offer
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      {cryptos.map((crypto, index) => (
+        <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50">
+          <div class={`inline-flex p-4 rounded-full bg-gray-100 mb-4`}>
+            <Bitcoin className={`h-8 w-8 ${crypto.color}`} />
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">{crypto.name}</h3>
+          <p class="text-sm text-gray-500 mb-4">{crypto.symbol}</p>
+          <div class="flex gap-2 justify-center">
+            {crypto.canBuy && (
+              <span class="px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
+                Buy
+              </span>
+            )}
+            {crypto.canSell && (
+              <span class="px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
+                Sell
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-8">
+      <button class="text-primary-500 font-semibold hover:text-primary-600 transition-colors">
+        More Fees Details →
+      </button>
+    </div>
+  </div>
+</section>
