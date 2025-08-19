@@ -69,7 +69,7 @@ export default {
         "slide-up": "slideUp 0.6s ease-out",
         "bounce-slow": "bounce 3s infinite",
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
-        "morph-slow": "morph-slow 20s ease-in-out infinite",
+        "morph-slow": "morph-slow 40s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -81,13 +81,13 @@ export default {
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
         "pulse-slow": {
-          "0%, 100%": { 
-            transform: "scale(1) rotate(0deg)", 
-            borderRadius: "40% 60% 60% 40% / 50% 40% 60% 50%" 
+          "0%, 100%": {
+            transform: "scale(1) rotate(0deg)",
+            borderRadius: "40% 60% 60% 40% / 50% 40% 60% 50%",
           },
-          "50%": { 
-            transform: "scale(1.05) rotate(2deg)", 
-            borderRadius: "60% 40% 40% 60% / 40% 60% 50% 40%" 
+          "50%": {
+            transform: "scale(1.05) rotate(2deg)",
+            borderRadius: "60% 40% 40% 60% / 40% 60% 50% 40%",
           },
         },
         "morph-slow": {

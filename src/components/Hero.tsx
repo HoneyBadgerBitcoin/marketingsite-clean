@@ -67,7 +67,7 @@ const Hero = () => {
                 <img 
                   src="/badger-hold-coin.png" 
                   alt="Honey Badger Bitcoin mascot" 
-                  className="max-w-full max-h-full object-contain drop-shadow-xl"
+                  className="max-w-full max-h-full object-contain drop-shadow-xl transform scale-x-[-1]"
                   style={{
                     filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.15))'
                   }}
