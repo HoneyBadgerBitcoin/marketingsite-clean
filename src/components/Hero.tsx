@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import LiquidGlassFrame from "./LiquidGlassFrame";
 
 const Hero = () => {
 
@@ -62,23 +61,19 @@ const Hero = () => {
             {/* Extended blue background that goes under text */}
             <div className="absolute -left-32 -top-8 w-[140%] h-[110%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0"></div>
             
-            <LiquidGlassFrame className="max-w-5xl relative z-10">
-              <div className="relative w-full h-[650px] group">
-                {/* Badger image container */}
-                <div className="relative w-full h-full flex items-center justify-center z-20">
-                  <div className="relative w-5/6 h-5/6 flex items-center justify-center">
-                    <img 
-                      src="/badger-hold-coin.png" 
-                      alt="Honey Badger Bitcoin mascot" 
-                      className="max-w-full max-h-full object-contain drop-shadow-xl"
-                      style={{
-                        filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.15))'
-                      }}
-                    />
-                  </div>
-                </div>
+            {/* Badger image container - no background frame */}
+            <div className="relative w-full h-[650px] flex items-center justify-center z-20">
+              <div className="relative w-5/6 h-5/6 flex items-center justify-center">
+                <img 
+                  src="/badger-hold-coin.png" 
+                  alt="Honey Badger Bitcoin mascot" 
+                  className="max-w-full max-h-full object-contain drop-shadow-xl"
+                  style={{
+                    filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.15))'
+                  }}
+                />
               </div>
-            </LiquidGlassFrame>
+            </div>
           </motion.div>
         </div>
       </div>
