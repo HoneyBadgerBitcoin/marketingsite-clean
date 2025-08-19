@@ -7,16 +7,16 @@ const Hero = () => {
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-white overflow-hidden">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative z-10"
+            className="relative z-20 lg:pr-8"
           >
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading text-gray-900 leading-tight text-left lg:text-left">
-              Buy Bitcoin in <span className="text-primary-500">Minutes</span>,
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading text-gray-900 leading-tight text-left lg:text-left drop-shadow-sm">
+              Buy Bitcoin in <span className="text-primary-500 drop-shadow-sm">Minutes</span>,
               <br />
               Not Hours
             </h1>
@@ -52,26 +52,28 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Badger with Blue Background */}
+          {/* Right Content - Badger with Blue Background (3D Overlap Effect) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:block -ml-12 xl:-ml-20"
           >
-            <LiquidGlassFrame className="max-w-4xl mx-auto">
-              <div className="relative w-full h-[600px] group">
-                {/* Badger with background container */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden flex items-center justify-center">
-                  {/* Irregular light blue background */}
-                  <div className="absolute w-[85%] h-[85%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%]"></div>
-                  
-                  {/* Badger image */}
-                  <div className="relative z-10 w-4/5 h-4/5 flex items-center justify-center">
+            <LiquidGlassFrame className="max-w-5xl">
+              <div className="relative w-full h-[650px] group">
+                {/* Extended blue background with shadow */}
+                <div className="absolute -left-16 top-8 w-[120%] h-[90%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0"></div>
+                
+                {/* Badger image container */}
+                <div className="relative w-full h-full flex items-center justify-center z-10">
+                  <div className="relative w-5/6 h-5/6 flex items-center justify-center">
                     <img 
                       src="/badger-hold-coin.png" 
                       alt="Honey Badger Bitcoin mascot" 
-                      className="max-w-full max-h-full object-contain"
+                      className="max-w-full max-h-full object-contain drop-shadow-xl"
+                      style={{
+                        filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.15))'
+                      }}
                     />
                   </div>
                 </div>
