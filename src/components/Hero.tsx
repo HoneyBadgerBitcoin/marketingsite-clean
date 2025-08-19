@@ -58,8 +58,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            {/* Extended blue background that goes under text - with slow morphing animation */}
-            <div className="absolute -left-32 -top-8 w-[140%] h-[110%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0 animate-morph-slow"></div>
+            {/* Extended blue background that goes under text - with slow morphing animation and gradient */}
+            <div className="absolute -left-32 -top-8 w-[140%] h-[110%] bg-gradient-to-b from-accent-200 to-accent-400 opacity-60 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0 animate-morph-slow"></div>
             
             {/* Badger image container - no background frame */}
             <div className="relative w-full h-[650px] flex items-center justify-center z-20">
