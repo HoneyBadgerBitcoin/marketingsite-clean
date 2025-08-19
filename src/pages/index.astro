@@ -1,12 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.tsx';
-import Hero from '../components/Hero.tsx';
+import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
 import ATMShowcase from '../components/ATMShowcase.astro';
 import Cryptocurrencies from '../components/Cryptocurrencies.astro';
 import CTA from '../components/CTA.astro';
 import Stats from '../components/Stats.tsx';
+import Support from '../components/Support.astro';
+import Insights from '../components/Insights.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
+import FAQ from '../components/FAQ.tsx';
 import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -15,7 +19,7 @@ import Footer from '../components/Footer.astro';
   <div class="min-h-screen bg-white">
     <Header client:load />
     <main>
-      <Hero client:load />
+    <Hero />
       <!-- Warm moving background wrapper with seamless edges -->
       <div class="relative" style="background: linear-gradient(to bottom, white 0%, #fdfcfb 15%, #f9f4ee 50%, #fdfcfb 85%, white 100%)">
         <!-- Animated warm background layers - contained within bounds -->
@@ -45,6 +49,10 @@ import Footer from '../components/Footer.astro';
           <Cryptocurrencies />
           <CTA />
           <Stats client:load />
+          <Support />
+          <Insights />
+          <NewsletterCTA />
+          <FAQ client:load />
           <FinalCTA />
         </div>
       </div>

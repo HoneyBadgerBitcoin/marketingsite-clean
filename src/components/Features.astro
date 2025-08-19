@@ -7,7 +7,7 @@ const services = [
     title: 'Buy Crypto With Cash',
     description: 'Find a HoneyBadger ATM near you',
     action: 'Buy Crypto',
-    bgColor: 'bg-primary-50',
+    bgColor: 'bg-white',
     iconBg: 'bg-primary-500',
   },
   {
@@ -15,23 +15,15 @@ const services = [
     title: 'Sell Crypto for Cash',
     description: 'Easily sell your crypto for cash at an ATM or online',
     action: 'Sell Crypto',
-    bgColor: 'bg-primary-50',
+    bgColor: 'bg-white',
     iconBg: 'bg-primary-500',
   },
   {
     icon: Smartphone,
-    title: 'Pre-Sell Crypto',
-    description: 'Pre-sell crypto online & skip the wait at ATM',
-    action: 'Pre-Sell',
-    bgColor: 'bg-primary-50',
-    iconBg: 'bg-primary-500',
-  },
-  {
-    icon: CreditCard,
-    title: 'Sell for e-Transfer',
-    description: 'Quickly sell your crypto from home via INTERAC e-Transfer®',
-    action: 'Sell Online',
-    bgColor: 'bg-primary-50',
+    title: 'Guided purchase (OTC)',
+    description: 'For high-value purchases and direct support, our team is here to assist you.',
+    action: 'Contact Specialist',
+    bgColor: 'bg-white',
     iconBg: 'bg-primary-500',
   },
 ];
@@ -46,10 +38,10 @@ const services = [
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
       {services.map((service, index) => (
         <div class="group">
-          <div class={`${service.bgColor} rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-full border border-gray-100/50`}>
+          <div class={`${service.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-full border border-gray-100/50`}>
             <div class={`${service.iconBg} inline-flex p-3 rounded-lg mb-4`}>
               <service.icon className="h-6 w-6 text-white" />
             </div>

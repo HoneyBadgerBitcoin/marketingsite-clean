@@ -1,0 +1,43 @@
+---
+---
+
+<section class="py-20">
+  <div class="container-custom">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Content -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Get real human support
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Quickly find the answers you need in our 
+          <a href="#support-center" class="text-accent-500 hover:text-accent-600 font-semibold underline">support centre</a>, 
+          or contact a member of our team 24/7/365, and we'll be happy to assist you.
+        </p>
+        <button class="px-8 py-4 bg-accent-500 text-white rounded-lg hover:bg-accent-600 hover:shadow-lg transition-all duration-300 font-semibold">
+          Contact support team
+        </button>
+      </div>
+
+      <!-- Illustration -->
+      <div class="relative flex items-center justify-center">
+        <img 
+          src="/badger-support.png" 
+          alt="HoneyBadger support representative with headset" 
+          class="w-full max-w-md h-auto animate-float-slow"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 3s ease-in-out infinite;
+  }
+</style>
