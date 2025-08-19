@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Badger with Blue Background (3D Overlap Effect) */}
+          {/* Right Content - Coin Rain with Blue Background (3D Overlap Effect) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,13 +61,13 @@ const Hero = () => {
             {/* Extended blue background that goes under text - with slow morphing animation and gradient */}
             <div className="absolute -left-32 -top-8 w-[140%] h-[110%] bg-gradient-to-b from-accent-200 to-accent-400 opacity-60 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0 animate-morph-slow"></div>
             
-            {/* Badger image container - no background frame */}
+            {/* Coin rain image container - no background frame */}
             <div className="relative w-full h-[650px] flex items-center justify-center z-20">
               <div className="relative w-5/6 h-5/6 flex items-center justify-center">
                 <img 
-                  src="/badger-hold-coin.png" 
-                  alt="Honey Badger Bitcoin mascot" 
-                  className="max-w-full max-h-full object-contain drop-shadow-xl transform scale-x-[-1]"
+                  src="/coin-from-sky.png" 
+                  alt="Bitcoin coins falling from sky" 
+                  className="max-w-full max-h-full object-contain drop-shadow-xl"
                   style={{
                     filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.15))'
                   }}
