@@ -5,9 +5,9 @@ import LiquidGlassFrame from "./LiquidGlassFrame";
 const Hero = () => {
 
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-white overflow-hidden">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+    <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-white relative">
+      <div className="container-custom relative overflow-visible">
+        <div className="grid lg:grid-cols-2 gap-8 items-center relative">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -57,15 +57,15 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative hidden lg:block -ml-12 xl:-ml-20"
+            className="relative hidden lg:block"
           >
-            <LiquidGlassFrame className="max-w-5xl">
+            {/* Extended blue background that goes under text */}
+            <div className="absolute -left-32 -top-8 w-[140%] h-[110%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0"></div>
+            
+            <LiquidGlassFrame className="max-w-5xl relative z-10">
               <div className="relative w-full h-[650px] group">
-                {/* Extended blue background with shadow */}
-                <div className="absolute -left-16 top-8 w-[120%] h-[90%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] shadow-2xl shadow-accent-300/30 z-0"></div>
-                
                 {/* Badger image container */}
-                <div className="relative w-full h-full flex items-center justify-center z-10">
+                <div className="relative w-full h-full flex items-center justify-center z-20">
                   <div className="relative w-5/6 h-5/6 flex items-center justify-center">
                     <img 
                       src="/badger-hold-coin.png" 
