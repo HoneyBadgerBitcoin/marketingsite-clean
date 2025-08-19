@@ -69,6 +69,7 @@ export default {
         "slide-up": "slideUp 0.6s ease-out",
         "bounce-slow": "bounce 3s infinite",
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "morph-slow": "morph-slow 20s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -87,6 +88,24 @@ export default {
           "50%": { 
             transform: "scale(1.05) rotate(2deg)", 
             borderRadius: "60% 40% 40% 60% / 40% 60% 50% 40%" 
+          },
+        },
+        "morph-slow": {
+          "0%, 100%": {
+            borderRadius: "40% 60% 60% 40% / 50% 40% 60% 50%",
+            transform: "rotate(0deg) scale(1)",
+          },
+          "25%": {
+            borderRadius: "60% 35% 55% 45% / 45% 55% 35% 65%",
+            transform: "rotate(0.5deg) scale(1.02)",
+          },
+          "50%": {
+            borderRadius: "35% 65% 40% 60% / 60% 30% 70% 40%",
+            transform: "rotate(-0.5deg) scale(0.98)",
+          },
+          "75%": {
+            borderRadius: "55% 45% 65% 35% / 40% 60% 40% 60%",
+            transform: "rotate(1deg) scale(1.01)",
           },
         },
       },
