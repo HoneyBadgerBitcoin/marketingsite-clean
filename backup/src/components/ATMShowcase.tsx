@@ -1,46 +1,46 @@
-import { motion } from 'framer-motion';
-import { Shield, Zap, Phone, Clock } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Shield, Zap, Phone, Clock } from "lucide-react";
 
 const ATMShowcase = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Simple & Smooth',
-      description: 'Hassle-free process to buy or sell crypto',
-      position: 'top-left'
+      title: "Simple & Smooth",
+      description: "Hassle-free process to buy or sell crypto",
+      position: "top-left",
     },
     {
       icon: Zap,
-      title: 'Instant',
-      description: 'Instant transfer to wallet of your choice',
-      position: 'top-right'
+      title: "Instant",
+      description: "Instant transfer to wallet of your choice",
+      position: "top-right",
     },
     {
       icon: Phone,
-      title: 'Live Customer Support',
-      description: 'Got questions? We\'re just a call away',
-      position: 'bottom-left'
+      title: "Live Customer Support",
+      description: "Got questions? We're just a call away",
+      position: "bottom-left",
     },
     {
       icon: Clock,
-      title: 'Convenient',
-      description: 'Over 220 ATMs across Canada, with more locations to come',
-      position: 'bottom-right'
-    }
+      title: "Convenient",
+      description: "Over 220 ATMs across Canada, with more locations to come",
+      position: "bottom-right",
+    },
   ];
 
   const getPositionClasses = (position: string) => {
     switch (position) {
-      case 'top-left':
-        return 'absolute top-0 left-0 lg:top-8 lg:left-8';
-      case 'top-right':
-        return 'absolute top-0 right-0 lg:top-8 lg:right-8';
-      case 'bottom-left':
-        return 'absolute bottom-0 left-0 lg:bottom-8 lg:left-8';
-      case 'bottom-right':
-        return 'absolute bottom-0 right-0 lg:bottom-8 lg:right-8';
+      case "top-left":
+        return "absolute top-0 left-0 lg:top-8 lg:left-8";
+      case "top-right":
+        return "absolute top-0 right-0 lg:top-8 lg:right-8";
+      case "bottom-left":
+        return "absolute bottom-0 left-0 lg:bottom-8 lg:left-8";
+      case "bottom-right":
+        return "absolute bottom-0 right-0 lg:bottom-8 lg:right-8";
       default:
-        return '';
+        return "";
     }
   };
 
@@ -54,7 +54,9 @@ const ATMShowcase = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-accent-500 font-semibold text-sm uppercase tracking-wider">CRYPTOCURRENCY</span>
+          <span className="text-accent-500 font-semibold text-sm uppercase tracking-wider">
+            CRYPTOCURRENCY
+          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-4 mb-8">
             Cash In on Crypto Today
           </h2>
@@ -77,10 +79,10 @@ const ATMShowcase = () => {
             <div className="relative w-[400px] h-[400px] lg:w-[500px] lg:h-[500px]">
               {/* Yellow gradient background circle */}
               <div className="absolute inset-0 bg-gradient-to-b from-accent-200 to-accent-400 opacity-60 rounded-full"></div>
-              
+
               {/* ATM Image */}
-              <img 
-                src="/atm-machine.webp" 
+              <img
+                src="/atm-machine.webp"
                 alt="HoneyBadger Bitcoin ATM"
                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 h-[85%] w-auto object-contain"
               />
@@ -102,7 +104,9 @@ const ATMShowcase = () => {
                   <div className="bg-accent-100 inline-flex p-3 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-accent-600" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-sm text-gray-600">{feature.description}</p>
                 </div>
               </motion.div>
@@ -123,7 +127,9 @@ const ATMShowcase = () => {
                   <div className="bg-accent-100 inline-flex p-3 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-accent-600" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-sm text-gray-600">{feature.description}</p>
                 </div>
               </motion.div>

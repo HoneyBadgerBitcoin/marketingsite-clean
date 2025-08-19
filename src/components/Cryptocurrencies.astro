@@ -32,36 +32,57 @@ const cryptos = [
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
         Cryptocurrencies We Offer
       </h2>
+      <p class="text-lg text-gray-600 mt-4">
+        Trade your favorite digital currencies with ease and confidence
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-      {cryptos.map((crypto, index) => (
-        <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50">
-          <div class={`inline-flex p-4 rounded-full bg-gray-100 mb-4`}>
-            <Bitcoin className={`h-8 w-8 ${crypto.color}`} />
-          </div>
-          <h3 class="font-bold text-gray-900 mb-1">{crypto.name}</h3>
-          <p class="text-sm text-gray-500 mb-4">{crypto.symbol}</p>
-          <div class="flex gap-2 justify-center">
-            {crypto.canBuy && (
-              <span class="px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
-                Buy
-              </span>
-            )}
-            {crypto.canSell && (
-              <span class="px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
-                Sell
-              </span>
-            )}
-          </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      {/* Left side - Badger Image */}
+      <div class="flex items-center justify-center lg:order-1">
+        <div class="relative w-full max-w-md">
+          <img 
+            src="/badger-hold-coin.png" 
+            alt="Honey Badger with Bitcoin" 
+            class="w-full h-auto object-contain drop-shadow-xl"
+          />
         </div>
-      ))}
-    </div>
+      </div>
 
-    <div class="text-center mt-8">
-      <button class="text-primary-500 font-semibold hover:text-primary-600 transition-colors">
-        More Fees Details →
-      </button>
+      {/* Right side - Crypto Cards */}
+      <div class="lg:order-2">
+        <div class="grid gap-4 max-w-sm">
+          {cryptos.map((crypto, index) => (
+            <div class="bg-white rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50 flex items-center justify-center">
+              <div class={`inline-flex p-3 rounded-full bg-gray-100 mr-4 flex-shrink-0`}>
+                <Bitcoin className={`h-6 w-6 ${crypto.color}`} />
+              </div>
+              <div class="text-center">
+                <h3 class="font-bold text-gray-900 mb-1">{crypto.name}</h3>
+                <p class="text-sm text-gray-500 mb-2">{crypto.symbol}</p>
+                <div class="flex gap-2 justify-center">
+                  {crypto.canBuy && (
+                    <span class="px-2 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
+                      Buy
+                    </span>
+                  )}
+                  {crypto.canSell && (
+                    <span class="px-2 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
+                      Sell
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-8">
+          <button class="text-primary-500 font-semibold hover:text-primary-600 transition-colors">
+            View All Supported Currencies →
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Bitcoin, ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Bitcoin, ArrowRight } from "lucide-react";
 
 const CTA = () => {
   return (
@@ -13,7 +13,9 @@ const CTA = () => {
           className="bg-primary-500 rounded-2xl p-12 md:p-16 text-center"
         >
           <div className="max-w-3xl mx-auto">
-            <span className="text-white/80 font-semibold text-sm uppercase tracking-wider">CRYPTOCURRENCY</span>
+            <span className="text-white/80 font-semibold text-sm uppercase tracking-wider">
+              CRYPTOCURRENCY
+            </span>
             <h2 className="text-3xl md:text-5xl font-bold text-white mt-4 mb-6">
               Cash In on Crypto Today
             </h2>
@@ -37,7 +39,9 @@ const CTA = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">WHY US</span>
+          <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">
+            WHY US
+          </span>
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-8">
             Simple & Smooth Process
           </h3>
@@ -47,28 +51,36 @@ const CTA = () => {
                 <Bitcoin className="h-8 w-8 text-primary-500" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Simple & Smooth</h4>
-              <p className="text-sm text-gray-600">Hassle-free process to buy or sell crypto</p>
+              <p className="text-sm text-gray-600">
+                Hassle-free process to buy or sell crypto
+              </p>
             </div>
             <div className="text-center">
               <div className="bg-primary-100 inline-flex p-4 rounded-lg mb-4">
                 <Bitcoin className="h-8 w-8 text-primary-500" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Instant</h4>
-              <p className="text-sm text-gray-600">Instant transfer to wallet of your choice</p>
+              <p className="text-sm text-gray-600">
+                Instant transfer to wallet of your choice
+              </p>
             </div>
             <div className="text-center">
               <div className="bg-primary-100 inline-flex p-4 rounded-lg mb-4">
                 <Bitcoin className="h-8 w-8 text-primary-500" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Live Support</h4>
-              <p className="text-sm text-gray-600">Got questions? We're just a call away</p>
+              <p className="text-sm text-gray-600">
+                Got questions? We're just a call away
+              </p>
             </div>
             <div className="text-center">
               <div className="bg-primary-100 inline-flex p-4 rounded-lg mb-4">
                 <Bitcoin className="h-8 w-8 text-primary-500" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Convenient</h4>
-              <p className="text-sm text-gray-600">Over 220 ATMs across Canada</p>
+              <p className="text-sm text-gray-600">
+                Over 220 ATMs across Canada
+              </p>
             </div>
           </div>
         </motion.div>

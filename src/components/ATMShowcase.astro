@@ -47,13 +47,297 @@ const getPositionClasses = (position: string) => {
 <section class="py-20">
   <div class="container-custom">
     <div class="text-center mb-12">
-      <span class="text-accent-500 font-semibold text-sm uppercase tracking-wider">CRYPTOCURRENCY</span>
-      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mt-4 mb-8">
-        Cash In on Crypto Today
+      <span class="text-accent-500 font-semibold text-sm uppercase tracking-wider">220+ LOCATIONS</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-8">
+        Find a HoneyBadger ATM Near You
       </h2>
-      <button class="px-8 py-4 bg-accent-500 text-white rounded-lg hover:bg-accent-600 transition-all duration-300 font-medium">
-        Buy Crypto
-      </button>
+      
+      <!-- ATM Carousel -->
+      <div class="mb-12 relative overflow-hidden carousel-container">
+        <div class="relative h-72">
+          <!-- Rotating carousel -->
+<div class="atm-carousel flex gap-5 absolute left-0 top-0 h-full items-center will-change-transform" style="animation: scroll 30s linear infinite;">
+            <!-- INS Market -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">INS Market</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">887 Dunsmur St, Vancouver, V6C 1N5, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 08:30 p.m. • 0 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- J & J Market -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">J & J Market</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">1319 Robson St, Vancouver, V6E 1C6, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 09:30 p.m. • 0 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Al-Madina General Store -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Al-Madina General Store</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">516 Pender St W, Vancouver, V6B 1V3, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">24/7 • 1 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Metro Plus -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Metro Plus</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">1020 Granville St, Vancouver, V6Z 2P7, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 10:00 p.m. • 0.5 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Quick Stop Mart -->
+<div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Quick Stop Mart</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">789 Seymour St, Vancouver, V6B 3K8, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 11:00 p.m. • 0.8 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Downtown Convenience -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Downtown Convenience</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">456 Burrard St, Vancouver, V6C 2K5, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">CLOSING SOON</span>
+                <span class="text-xs text-gray-500">Open until 07:00 p.m. • 1.2 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Corner Market -->
+<div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Corner Market</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">234 Hastings St W, Vancouver, V6B 1G8, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">24/7 • 1.5 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Duplicate all cards for seamless loop -->
+            <!-- INS Market (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">INS Market</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">887 Dunsmur St, Vancouver, V6C 1N5, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 08:30 p.m. • 0 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- J & J Market (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">J & J Market</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">1319 Robson St, Vancouver, V6E 1C6, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 09:30 p.m. • 0 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Al-Madina General Store (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Al-Madina General Store</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">516 Pender St W, Vancouver, V6B 1V3, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">24/7 • 1 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Metro Plus (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Metro Plus</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">1020 Granville St, Vancouver, V6Z 2P7, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 10:00 p.m. • 0.5 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Quick Stop Mart (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-sm ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Quick Stop Mart</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">789 Seymour St, Vancouver, V6B 3K8, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">Open until 11:00 p.m. • 0.8 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Downtown Convenience (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Downtown Convenience</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">456 Burrard St, Vancouver, V6C 2K5, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">CLOSING SOON</span>
+                <span class="text-xs text-gray-500">Open until 07:00 p.m. • 1.2 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+            
+            <!-- Corner Market (duplicate) -->
+            <div class="atm-card bg-white rounded-3xl overflow-hidden p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[280px] h-[220px] flex-shrink-0 flex flex-col">
+              <div class="bg-gray-50 rounded-2xl h-16 mb-4 flex items-center justify-center">
+                <div class="w-7 h-7 bg-accent-500 rounded-full flex items-center justify-center shadow-sm">
+                  <span class="text-white text-xs font-bold">📍</span>
+                </div>
+              </div>
+              <h4 class="font-bold text-gray-900 mb-2 text-sm">Corner Market</h4>
+              <p class="text-xs text-gray-600 mb-3 leading-relaxed">234 Hastings St W, Vancouver, V6B 1G8, Canada</p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">OPEN</span>
+                <span class="text-xs text-gray-500">24/7 • 1.5 km away</span>
+              </div>
+              <button class="text-accent-500 font-semibold text-xs hover:text-accent-600 transition-colors flex items-center group">
+                View Store Details 
+                <span class="ml-1 group-hover:translate-x-0.5 transition-transform">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Address input and Find ATM button -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8 max-w-md mx-auto">
+        <input 
+          type="text" 
+          placeholder="Enter your address or postal code" 
+          class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent text-gray-900 flex-1"
+        />
+        <button class="px-8 py-3 bg-accent-500 text-white rounded-lg hover:bg-accent-600 transition-all duration-300 font-medium">
+          Find ATM
+        </button>
+      </div>
     </div>
 
     <!-- ATM with surrounding feature cards -->
@@ -106,3 +390,52 @@ const getPositionClasses = (position: string) => {
     </div>
   </div>
 </section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .atm-carousel {
+    width: calc((280px + 20px) * 14); /* 14 cards with 280px width + 20px gap each */
+  }
+  
+  /* Apply fade effect to the container edges */
+  .carousel-container {
+    mask-image: linear-gradient(90deg, transparent 0, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, black 10%, black 90%, transparent 100%);
+  }
+  
+  /* Pause animation when hovering over the entire carousel container */
+  .atm-carousel:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+<script>
+  // Pause carousel when hovering any individual card, resume on leave
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.atm-carousel');
+    if (!carousel) return;
+    let hoverCount = 0;
+    const pause = () => { if (carousel) carousel.style.animationPlayState = 'paused'; };
+    const resume = () => { if (carousel) carousel.style.animationPlayState = 'running'; };
+
+    const cards = carousel.querySelectorAll('.atm-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        hoverCount += 1;
+        pause();
+      });
+      card.addEventListener('mouseleave', () => {
+        hoverCount = Math.max(0, hoverCount - 1);
+        if (hoverCount === 0) resume();
+      });
+    });
+  });
+</script>
