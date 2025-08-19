@@ -1,22 +1,8 @@
 import { motion } from "framer-motion";
-import { MapPin, Play, Pause } from "lucide-react";
-import { useState, useRef } from "react";
+import { MapPin } from "lucide-react";
 import LiquidGlassFrame from "./LiquidGlassFrame";
 
 const Hero = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-white overflow-hidden">
@@ -66,7 +52,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Video with Simple Glass Frame */}
+          {/* Right Content - Badger with Blue Background */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -75,32 +61,19 @@ const Hero = () => {
           >
             <LiquidGlassFrame className="max-w-4xl mx-auto">
               <div className="relative w-full h-[600px] group">
-                {/* Video container */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gray-50">
-                  <video
-                    ref={videoRef}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-contain"
-                  >
-                    <source src="/badger-3d.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-
-                  {/* Play/Pause Button */}
-                  <button
-                    onClick={toggleVideo}
-                    className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white transition-all duration-200 opacity-0 group-hover:opacity-100"
-                    aria-label={isPlaying ? "Pause video" : "Play video"}
-                  >
-                    {isPlaying ? (
-                      <Pause className="h-5 w-5 text-gray-800" />
-                    ) : (
-                      <Play className="h-5 w-5 text-gray-800 ml-0.5" />
-                    )}
-                  </button>
+                {/* Badger with background container */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden flex items-center justify-center">
+                  {/* Irregular light blue background */}
+                  <div className="absolute w-[85%] h-[85%] bg-accent-200 rounded-[40%_60%_60%_40%/50%_40%_60%_50%]"></div>
+                  
+                  {/* Badger image */}
+                  <div className="relative z-10 w-4/5 h-4/5 flex items-center justify-center">
+                    <img 
+                      src="/badger-hold-coin.png" 
+                      alt="Honey Badger Bitcoin mascot" 
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </LiquidGlassFrame>
