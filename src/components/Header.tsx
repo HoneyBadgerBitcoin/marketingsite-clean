@@ -8,7 +8,7 @@ import {
   ShoppingCart, 
   MapPin, 
   HeadphonesIcon, 
-  TrendingDown, 
+  TrendingUp, 
   UserCheck, 
   Banknote, 
   Building2, 
@@ -41,7 +41,7 @@ const buyItems = [
   ];
 
   const sellItems = [
-    { label: "Sell at ATM", href: "#sell-atm", icon: TrendingDown },
+    { label: "Sell at ATM", href: "#sell-atm", icon: TrendingUp },
     { label: "Guided Sales", href: "#guided-sales", icon: HeadphonesIcon },
   ];
 
