@@ -105,7 +105,7 @@ const Header = () => {
             <button className="px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors">
               Sign In
             </button>
-            <button className="px-6 py-2 bg-accent-500 text-white rounded-full hover:bg-accent-600 hover:shadow-lg transition-all duration-300 font-medium">
+            <button className="px-6 py-2 bg-dark-accent-400 text-white rounded-full hover:bg-dark-accent-500 hover:shadow-lg transition-all duration-300 font-medium">
               Find ATM
             </button>
           </div>
@@ -212,7 +212,7 @@ const Header = () => {
               <button className="px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors">
                 Sign In
               </button>
-              <button className="px-6 py-2 bg-accent-500 text-white rounded-full hover:bg-accent-600 hover:shadow-lg transition-all duration-300 font-medium">
+              <button className="px-6 py-2 bg-dark-accent-400 text-white rounded-full hover:bg-dark-accent-500 hover:shadow-lg transition-all duration-300 font-medium">
                 Find ATM
               </button>
             </div>
