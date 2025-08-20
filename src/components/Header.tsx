@@ -1,6 +1,24 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { 
+  Menu, 
+  X, 
+  Globe, 
+  ChevronDown, 
+  ShoppingCart, 
+  MapPin, 
+  HeadphonesIcon, 
+  TrendingDown, 
+  UserCheck, 
+  Banknote, 
+  Building2, 
+  HelpCircle, 
+  MessageCircle, 
+  FileText, 
+  Shield, 
+  Wallet, 
+  BookOpen
+} from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,21 +34,33 @@ const Header = () => {
     { code: "DE", label: "Deutsch", region: "Germany" },
   ];
 
-  const navItems = [
-    { label: "Buy", href: "#buy" },
-    { label: "Sell", href: "#sell" },
+const buyItems = [
+    { label: "Buy Online", href: "#buy-online", icon: ShoppingCart },
+    { label: "Buy at ATM", href: "#buy-atm", icon: Banknote },
+    { label: "Guided Purchase", href: "#guided-purchase", icon: UserCheck },
+  ];
+
+  const sellItems = [
+    { label: "Sell at ATM", href: "#sell-atm", icon: TrendingDown },
+    { label: "Guided Sales", href: "#guided-sales", icon: HeadphonesIcon },
   ];
 
   const atmItems = [
-    { label: "Find an ATM", href: "#find-atm" },
-    { label: "Host an ATM", href: "#host-atm" },
+    { label: "Find an ATM", href: "#find-atm", icon: MapPin },
+    { label: "Host an ATM", href: "#host-atm", icon: Building2 },
   ];
 
   const learnItems = [
-    { label: "About us", href: "#about" },
-    { label: "Blog", href: "#blog" },
-    { label: "News", href: "#news" },
-    { label: "Help Center", href: "#help" },
+    { label: "About Us", href: "#about", icon: BookOpen },
+    { label: "News", href: "#news", icon: FileText },
+    { label: "Bitcoin Wallets", href: "#bitcoin-wallets", icon: Wallet },
+    { label: "Fraud Education", href: "#fraud-education", icon: Shield },
+    { label: "Terms and Conditions", href: "#terms-conditions", icon: FileText },
+  ];
+
+  const supportItems = [
+    { label: "FAQ", href: "#faq", icon: HelpCircle },
+    { label: "Contact Us", href: "#contact", icon: MessageCircle },
   ];
 
   return (
@@ -54,15 +84,23 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
+            {/* Buy Dropdown Button */}
+            <button 
+              className="flex items-center space-x-1 text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
+              onMouseEnter={() => setOpenDropdown('buy')}
+            >
+              <span>Buy</span>
+              <ChevronDown className="h-4 w-4" />
+            </button>
+            
+            {/* Sell Dropdown Button */}
+            <button 
+              className="flex items-center space-x-1 text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
+              onMouseEnter={() => setOpenDropdown('sell')}
+            >
+              <span>Sell</span>
+              <ChevronDown className="h-4 w-4" />
+            </button>
             
             {/* ATMs Dropdown Button */}
             <button 
@@ -73,12 +111,14 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </button>
             
-            <a
-              href="#support"
-              className="text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
+            {/* Support Dropdown Button */}
+            <button 
+              className="flex items-center space-x-1 text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium"
+              onMouseEnter={() => setOpenDropdown('support')}
             >
-              Support
-            </a>
+              <span>Support</span>
+              <ChevronDown className="h-4 w-4" />
+            </button>
             
             {/* Learn Dropdown Button */}
             <button 
@@ -133,16 +173,33 @@ const Header = () => {
           className="md:hidden border-t border-gray-100 bg-white"
         >
           <div className="container-custom py-4">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block py-2 text-gray-700 hover:text-primary-500 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            <div className="py-2 border-b border-gray-100 mb-4">
+              <div className="text-sm font-medium text-gray-500 mb-2">Buy</div>
+              {buyItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block py-2 pl-4 text-gray-700 hover:text-primary-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            
+            <div className="py-2 border-b border-gray-100 mb-4">
+              <div className="text-sm font-medium text-gray-500 mb-2">Sell</div>
+              {sellItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block py-2 pl-4 text-gray-700 hover:text-primary-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
             
             <div className="py-2 border-t border-gray-100 mt-4">
               <div className="text-sm font-medium text-gray-500 mb-2">ATMs</div>
@@ -158,13 +215,19 @@ const Header = () => {
               ))}
             </div>
             
-            <a
-              href="#support"
-              className="block py-2 text-gray-700 hover:text-primary-500 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Support
-            </a>
+            <div className="py-2 border-t border-gray-100 mt-4">
+              <div className="text-sm font-medium text-gray-500 mb-2">Support</div>
+              {supportItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block py-2 pl-4 text-gray-700 hover:text-primary-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
             
             <div className="py-2 border-t border-gray-100 mt-4">
               <div className="text-sm font-medium text-gray-500 mb-2">Learn</div>
@@ -247,6 +310,9 @@ const Header = () => {
                       onClick={() => setOpenDropdown(null)}
                       className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-primary-400 bg-white/60 hover:bg-white/80 text-gray-700 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow-md"
                     >
+                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
+                        <item.icon className="h-5 w-5" />
+                      </div>
                       <div className="text-left">
                         <div className="font-medium">{item.label}</div>
                       </div>
@@ -275,6 +341,102 @@ const Header = () => {
                       onClick={() => setOpenDropdown(null)}
                       className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-primary-400 bg-white/60 hover:bg-white/80 text-gray-700 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow-md"
                     >
+                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <div className="text-left">
+                        <div className="font-medium">{item.label}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Buy Mega Content */}
+            {openDropdown === 'buy' && (
+              <div>
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Purchase Options
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Choose how you'd like to buy cryptocurrency
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {buyItems.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setOpenDropdown(null)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-primary-400 bg-white/60 hover:bg-white/80 text-gray-700 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow-md"
+                    >
+                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <div className="text-left">
+                        <div className="font-medium">{item.label}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Sell Mega Content */}
+            {openDropdown === 'sell' && (
+              <div>
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Selling Options
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Choose how you'd like to sell your cryptocurrency
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {sellItems.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setOpenDropdown(null)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-primary-400 bg-white/60 hover:bg-white/80 text-gray-700 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow-md"
+                    >
+                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <div className="text-left">
+                        <div className="font-medium">{item.label}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Support Mega Content */}
+            {openDropdown === 'support' && (
+              <div>
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Support & Help
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Get assistance and find answers to your questions
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {supportItems.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setOpenDropdown(null)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-primary-400 bg-white/60 hover:bg-white/80 text-gray-700 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow-md"
+                    >
+                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
+                        <item.icon className="h-5 w-5" />
+                      </div>
                       <div className="text-left">
                         <div className="font-medium">{item.label}</div>
                       </div>
