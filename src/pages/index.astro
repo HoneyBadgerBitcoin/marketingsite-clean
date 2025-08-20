@@ -6,13 +6,14 @@ import Features from '../components/Features.astro';
 import ATMShowcase from '../components/ATMShowcase.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Cryptocurrencies from '../components/Cryptocurrencies.astro';
-import CTA from '../components/CTA.astro';
+import FundingMethods from '../components/FundingMethods.astro';
+import TrustPlatform from '../components/TrustPlatform.astro';
 import Stats from '../components/Stats.tsx';
 import Support from '../components/Support.astro';
 import Insights from '../components/Insights.astro';
 import NewsletterCTA from '../components/NewsletterCTA.astro';
 import FAQ from '../components/FAQ.tsx';
-import FinalCTA from '../components/FinalCTA.astro';
+import CTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -48,14 +49,15 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="relative z-10">
           <Cryptocurrencies />
-          <CTA />
           <Stats client:load />
+          <FundingMethods />
+          <TrustPlatform />
           <Support />
           <Testimonials />
           <Insights />
           <NewsletterCTA />
           <FAQ client:load />
-          <FinalCTA />
+          <CTA />
         </div>
       </div>
     </main>
