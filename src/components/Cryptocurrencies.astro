@@ -7,7 +7,9 @@ const cryptos = [
     symbol: "BTC",
     canBuy: true,
     canSell: true,
-    color: "text-primary-500",
+    color: "text-orange-500",
+    buyPrice: "$187,393.69",
+    sellPrice: "$146,559.62",
   },
   {
     name: "Ethereum",
@@ -15,6 +17,8 @@ const cryptos = [
     canBuy: true,
     canSell: true,
     color: "text-purple-500",
+    buyPrice: "$4,256.88",
+    sellPrice: "$4,102.33",
   },
   {
     name: "Litecoin",
@@ -22,6 +26,8 @@ const cryptos = [
     canBuy: true,
     canSell: true,
     color: "text-gray-500",
+    buyPrice: "$191.07",
+    sellPrice: "$149.70",
   },
 ];
 ---
@@ -50,39 +56,77 @@ const cryptos = [
       </div>
 
       {/* Right side - Crypto Cards */}
-      <div class="lg:order-2">
-        <div class="grid gap-4 max-w-sm">
+      <div class="lg:order-2 flex flex-col justify-center items-center">
+        <div class="grid gap-4 max-w-sm w-full">
           {cryptos.map((crypto, index) => (
-            <div class="bg-white rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50 flex items-center justify-center">
-              <div class={`inline-flex p-3 rounded-full bg-gray-100 mr-4 flex-shrink-0`}>
-                <Bitcoin className={`h-6 w-6 ${crypto.color}`} />
-              </div>
-              <div class="text-center">
-                <h3 class="font-bold text-gray-900 mb-1">{crypto.name}</h3>
-                <p class="text-sm text-gray-500 mb-2">{crypto.symbol}</p>
-                <div class="flex gap-2 justify-center">
-                  {crypto.canBuy && (
-                    <span class="px-2 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
-                      Buy
-                    </span>
-                  )}
-                  {crypto.canSell && (
-                    <span class="px-2 py-1 bg-primary-100 text-primary-600 rounded-full text-xs font-semibold">
-                      Sell
-                    </span>
-                  )}
+            <div class="bg-white rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50">
+              {/* Header with Icon and Name */}
+              <div class="flex items-center mb-3">
+                <div class={`inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 mr-3 flex-shrink-0`}>
+                  <Bitcoin className={`h-5 w-5 ${crypto.color}`} />
                 </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">{crypto.name}</h3>
+                  <p class="text-xs text-gray-500">{crypto.symbol}</p>
+                </div>
+              </div>
+              
+              {/* Pricing Section */}
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                {crypto.canBuy && (
+                  <div class="text-left">
+                    <div class="flex items-center mb-1">
+                      <svg class="w-3 h-3 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path>
+                      </svg>
+                      <span class="text-xs font-medium text-gray-700">Buy</span>
+                    </div>
+                    <p class="font-bold text-sm text-gray-900">{crypto.buyPrice}</p>
+                  </div>
+                )}
+                {crypto.canSell && (
+                  <div class="text-left">
+                    <div class="flex items-center mb-1">
+                      <svg class="w-3 h-3 text-red-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"></path>
+                      </svg>
+                      <span class="text-xs font-medium text-gray-700">Sell</span>
+                    </div>
+                    <p class="font-bold text-sm text-gray-900">{crypto.sellPrice}</p>
+                  </div>
+                )}
+              </div>
+              
+              {/* Action Buttons */}
+              <div class="flex gap-2">
+                {crypto.canBuy && (
+                  <button class="flex-1 px-3 py-1.5 bg-green-100 hover:bg-green-200 text-green-700 rounded-lg text-xs font-semibold transition-colors">
+                    Buy {crypto.symbol}
+                  </button>
+                )}
+                {crypto.canSell && (
+                  <button class="flex-1 px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 rounded-lg text-xs font-semibold transition-colors">
+                    Sell {crypto.symbol}
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
         
-        <div class="mt-8">
+        <div class="mt-8 text-center">
           <button class="text-primary-500 font-semibold hover:text-primary-600 transition-colors">
             View All Supported Currencies →
           </button>
         </div>
       </div>
+    </div>
+    
+    {/* Price Update Notice */}
+    <div class="text-center mt-8">
+      <p class="text-sm text-gray-500">
+        Prices update every 30 seconds • Last updated: <span class="font-medium">2:17 PM EST</span>
+      </p>
     </div>
   </div>
 </section>
