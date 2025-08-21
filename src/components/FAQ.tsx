@@ -8,7 +8,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How do I purchase Bitcoin?",
-      answer: "You can purchase Bitcoin at any of our 220+ ATM locations across Canada. Simply visit a HoneyBadger ATM, follow the on-screen instructions, insert cash, and provide your Bitcoin wallet address. The Bitcoin will be transferred to your wallet instantly."
+      answer: "HoneyBadger makes it easy to buy Bitcoin online, at an ATM, or by phone. Simply visit a HoneyBadger ATM, follow the on-screen instructions, insert cash, and provide your Bitcoin wallet address. The Bitcoin will be transferred to your wallet instantly."
     },
     {
       question: "How do beginners buy Bitcoins?",

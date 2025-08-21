@@ -143,10 +143,10 @@ const buyItems = [
             </button>
             
             <button className="px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors">
-              Sign In
+              Log in
             </button>
             <button className="px-6 py-2 bg-dark-accent-400 text-white rounded-full hover:bg-dark-accent-500 hover:shadow-lg transition-all duration-300 font-medium">
-              Find ATM
+              Sign up
             </button>
           </div>
 
@@ -273,10 +273,10 @@ const buyItems = [
 
             <div className="flex flex-col space-y-2 mt-4">
               <button className="px-4 py-2 text-gray-700 hover:text-primary-500 transition-colors">
-                Sign In
+                Log in
               </button>
               <button className="px-6 py-2 bg-dark-accent-400 text-white rounded-full hover:bg-dark-accent-500 hover:shadow-lg transition-all duration-300 font-medium">
-                Find ATM
+                Sign up
               </button>
             </div>
           </div>
