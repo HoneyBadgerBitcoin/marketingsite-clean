@@ -1,4 +1,6 @@
 ---
+import { Analytics } from '@vercel/analytics/react';
+
 export interface Props {
   title: string;
   description?: string;
@@ -18,10 +20,7 @@ const { title, description = "Canada's trusted platform for buying and selling d
   </head>
   <body class="min-h-screen bg-white">
     <slot />
-    <script>
-      import { inject } from '@vercel/analytics';
-      inject();
-    </script>
+    <Analytics client:load />
   </body>
 </html>
 
