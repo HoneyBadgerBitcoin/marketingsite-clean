@@ -23,7 +23,7 @@ const features = [
   {
     icon: Clock,
     title: 'Convenient',
-    description: 'Over 220 ATMs across Canada, with more locations to come',
+    description: 'Over 220 ATMs across Canada and growing',
     position: 'bottom-right'
   }
 ];
@@ -31,13 +31,13 @@ const features = [
 const getPositionClasses = (position: string) => {
   switch (position) {
     case 'top-left':
-      return 'absolute top-0 left-0 lg:top-8 lg:left-8';
+      return 'absolute top-0 left-0 lg:top-0 lg:left-8';
     case 'top-right':
-      return 'absolute top-0 right-0 lg:top-8 lg:right-8';
+      return 'absolute top-0 right-0 lg:top-0 lg:right-8';
     case 'bottom-left':
-      return 'absolute bottom-0 left-0 lg:bottom-8 lg:left-8';
+      return 'absolute bottom-0 left-0 lg:bottom-0 lg:left-8';
     case 'bottom-right':
-      return 'absolute bottom-0 right-0 lg:bottom-8 lg:right-8';
+      return 'absolute bottom-0 right-0 lg:bottom-0 lg:right-8';
     default:
       return '';
   }
@@ -328,7 +328,7 @@ const getPositionClasses = (position: string) => {
       </div>
       
       <!-- Address input and Find ATM button -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8 max-w-md mx-auto">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 max-w-md mx-auto">
         <input 
           type="text" 
           placeholder="Enter your address or postal code" 
@@ -341,19 +341,19 @@ const getPositionClasses = (position: string) => {
     </div>
 
     <!-- ATM with surrounding feature cards -->
-    <div class="relative max-w-5xl mx-auto">
+    <div class="relative max-w-5xl mx-auto mt-12">
       <!-- Central ATM Image -->
       <div class="flex items-center justify-center">
         <!-- Perfect circle background -->
-        <div class="relative w-[400px] h-[400px] lg:w-[500px] lg:h-[500px]">
-          <!-- Yellow gradient background circle -->
-          <div class="absolute inset-0 bg-gradient-to-b from-dark-accent-200 to-dark-accent-400 opacity-60 rounded-full"></div>
+        <div class="relative w-[350px] h-[350px] lg:w-[420px] lg:h-[420px]">
+          <!-- Blue gradient background circle -->
+          <div class="absolute inset-6 bg-gradient-to-b from-dark-accent-200 to-dark-accent-400 opacity-60 rounded-full"></div>
           
-          <!-- ATM Image -->
+          <!-- ATM Image - Made bigger and extends beyond circle -->
           <img 
             src="/atm-machine.webp" 
             alt="HoneyBadger Bitcoin ATM"
-            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 h-[85%] w-auto object-contain"
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-20 z-10 h-[130%] w-auto object-contain"
           />
         </div>
       </div>
@@ -420,7 +420,7 @@ const getPositionClasses = (position: string) => {
 <script>
   // Pause carousel when hovering any individual card, resume on leave
   document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.atm-carousel');
+    const carousel = document.querySelector('.atm-carousel') as HTMLElement;
     if (!carousel) return;
     let hoverCount = 0;
     const pause = () => { if (carousel) carousel.style.animationPlayState = 'paused'; };
