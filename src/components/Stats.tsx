@@ -46,8 +46,7 @@ const Stats = () => {
       <div className="container-custom">
         {/* Why Us Section */}
         <div className="text-center mb-16">
-          <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">WHY US</span>
-          <h2 className="text-5xl font-bold text-gray-900 mt-2 mb-8">
+          <h2 className="text-5xl font-bold text-gray-900 mb-8">
             Simple & Smooth Process
           </h2>
           <div className="grid md:grid-cols-5 gap-6 mb-16">
