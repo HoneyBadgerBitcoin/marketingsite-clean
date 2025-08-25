@@ -17,8 +17,8 @@ export default {
         neohead: ["Neohead", "sans-serif"],
         bondia: ["Bondia", "sans-serif"],
         rubik: ["Rubik", "sans-serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        body: ["Poppins", "system-ui", "sans-serif"],
+        sans: ["Poppins", "system-ui", "sans-serif"],
       },
       colors: {
         primary: {
