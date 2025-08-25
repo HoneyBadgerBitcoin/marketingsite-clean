@@ -1,5 +1,6 @@
 ---
 import { Bitcoin } from "lucide-react";
+import VideoPlayer from "./VideoPlayer.astro";
 
 const cryptos = [
   {
@@ -47,10 +48,10 @@ const cryptos = [
       {/* Left side - Badger Image */}
       <div class="flex items-center justify-center lg:order-1">
         <div class="relative w-full max-w-md">
-          <img 
-            src="/badger-hold-coin.png" 
-            alt="Honey Badger with Bitcoin" 
-            class="w-full h-auto object-contain drop-shadow-xl"
+          <VideoPlayer 
+            src="/crypto-hero.webm" 
+            alt="Honey Badger with Bitcoin animated video" 
+            class="drop-shadow-xl"
           />
         </div>
       </div>

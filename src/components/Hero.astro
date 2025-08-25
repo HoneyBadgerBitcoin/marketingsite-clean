@@ -1,4 +1,5 @@
 ---
+import VideoPlayer from "./VideoPlayer.astro";
 // Hero component - no server-side logic needed
 ---
 
@@ -50,12 +51,12 @@
 
       <!-- Right Content - Coin Rain -->
       <div class="relative hidden lg:block hero-image">
-        <!-- Coin rain image container -->
+        <!-- Coin rain video container -->
         <div class="relative w-full h-[750px] flex items-center justify-center">
-          <img
-            src="/coin-from-sky.png"
-            alt="Bitcoin coins falling from sky"
-            class="w-full h-full object-contain drop-shadow-xl"
+          <VideoPlayer 
+            src="/crypto-hero-rolling.webm" 
+            alt="Bitcoin coins falling from sky animated video" 
+            class="w-full h-full drop-shadow-xl"
             style="filter: drop-shadow(0 10px 25px rgba(0,0,0,0.15));"
           />
         </div>
