@@ -47,10 +47,20 @@ const Stats = () => {
           <h2 className="text-5xl font-bold text-gray-900 mb-6">
             Canada's secure and trusted platform
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
             Buy and sell Bitcoin and a variety of the best cryptocurrencies with peace of mind.
           </p>
-          <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+        </div>
+
+        {/* Big Unified Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100/50 max-w-7xl mx-auto"
+        >
+          {/* Trust Features Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -58,10 +68,10 @@ const Stats = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ 
                   duration: 0.6, 
-                  delay: index * 0.2,
+                  delay: index * 0.2 + 0.3,
                   ease: "easeOut"
                 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100/50 text-center group hover:-translate-y-1"
+                className="text-center group"
               >
                 <div className={`${feature.bgColor} inline-flex p-4 rounded-xl mb-6 w-16 h-16 items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`} dangerouslySetInnerHTML={{__html: feature.iconSvg}}>
                 </div>
@@ -70,27 +80,30 @@ const Stats = () => {
               </motion.div>
             ))}
           </div>
-        </div>
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8" ref={ref}>
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-3xl md:text-4xl font-bold text-gray-900">
-                {stat.prefix}
-                {isInView && <Counter end={stat.value} />}
-                {stat.suffix}
-              </div>
-              <p className="mt-2 text-gray-700">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
+          {/* Divider */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-16"></div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" ref={ref}>
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 + 0.8 }}
+                className="text-center"
+              >
+                <div className="text-3xl md:text-4xl font-bold text-gray-900">
+                  {stat.prefix}
+                  {isInView && <Counter end={stat.value} />}
+                  {stat.suffix}
+                </div>
+                <p className="mt-2 text-gray-700">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
