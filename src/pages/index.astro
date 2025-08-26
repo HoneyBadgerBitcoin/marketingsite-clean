@@ -33,7 +33,9 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
         <div class="relative z-10">
-          <Features />
+          <Stats client:load />
+          <!-- <Features /> -->
+          <Cryptocurrencies />
           <ATMShowcase />
         </div>
       </div>
@@ -48,9 +50,7 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
         <div class="relative z-10">
-          <Cryptocurrencies />
-          <Stats client:load />
-          <FundingMethods />
+          <!-- <FundingMethods /> -->
           <TrustPlatform />
           <Support />
           <Testimonials />
